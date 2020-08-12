@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\homeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'homeController@index')->name('home');
-Route::view('about', 'about')->name('about');
+Route::view('/', 'presentation')->name('presentation');					  					//Muestra la presentacion
+Route::get('problems/{id}', 'problemasController@index')->name('problems'); //Se encarga de controlar las vistas por numero de problemas
+Route::view('about', 'about')->name('about');			  					//Muestra la informacion "Acerca de"
