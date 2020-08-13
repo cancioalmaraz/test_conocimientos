@@ -2,7 +2,7 @@
 	@csrf
 	<div class="form-group" style="margin-left: 30px; margin-right: 30px;">
 		<label for="textProblem" style="font-size: 25px;"><strong>Ingrese Las Frases</strong></label>
-		<textarea name="text" class="form-control" id="textProblem" rows="6">{{ $older }}</textarea>
+		<textarea name="text" class="form-control" id="textProblem" rows="10">{{ $older }}</textarea>
 		<br>
 		<div>
 			<button type="submit" class="btn btn-primary mb-2">Ejecutar</button>

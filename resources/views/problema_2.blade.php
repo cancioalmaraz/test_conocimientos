@@ -6,7 +6,10 @@
 	<br>
 	<h2 align="center">PROBLEMA 2</h2>
 
-	@include('partials/textArea')
+	@include('partials/textAreaEntrada')
 
-	<h2 style="margin-left: 30px;">{{ $respuesta }}</h2>
+	@include('partials/textAreaRespuesta')
+
+	<br>
+
 @endsection
