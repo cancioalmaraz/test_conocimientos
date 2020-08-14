@@ -1,12 +1,3 @@
-<style>
-	.navbar-collapse{
-		text-align: center;
-	}
-	.navbar-brand{
-		font-size: 30px;
-	}
-</style>
-
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #732077;">
 	<a class="navbar-brand align-center">
 		<img src="../pc.png" width="45" height="45" class="d-inline-block align-center" alt="">
@@ -38,4 +29,3 @@
 		</ul>
 	</div>
 </nav>
-

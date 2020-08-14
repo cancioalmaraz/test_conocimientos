@@ -5,6 +5,7 @@
 @section('content')
 	<br>
 	<h2 align="center">PROBLEMA 1</h2>
+	<hr>
 
 	@include('partials/textAreaEntrada')
 
