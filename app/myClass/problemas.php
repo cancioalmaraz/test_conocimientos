@@ -67,9 +67,90 @@ class problemas
     	}
     }
 
+    private function typeRima($arraySil){
+        $resp = "DESCONOCIDO";
+        $lenSil = count($arraySil);
+        if($lenSil == 2){
+            if ($arraySil[0] == $arraySil[1]){
+                $resp = "PAREADO";
+            }
+        }
+        elseif($lenSil == 3) {
+            if ($arraySil[0] == $arraySil[2]){
+                $resp = "TERCETO";
+            }
+        }
+        elseif($lenSil == 4){
+            if($arraySil[0] == $arraySil[1] and $arraySil[1] == $arraySil[2] and $arraySil[2] == $arraySil[3]){
+                $resp = "CUADERNA VIA";
+            }
+            elseif($arraySil[0] == $arraySil[3] and $arraySil[1] == $arraySil[2] and $arraySil[3] != $arraySil[1]){
+                $resp = "CUARTETO";
+            }
+            elseif($arraySil[0] == $arraySil[2] and $arraySil[1] == $arraySil[3] and $arraySil[2] != $arraySil[1]){
+                $resp = "CUARTETA";
+            }
+        }
+        return $resp;
+    }
+
+    private function is_valid($letter){
+        if($letter != ";" and $letter != "," and $letter != ":" and $letter != " " and $letter != "."){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    private function rimaParrafo($text){
+        $lines = explode("\r\n", $text);
+        $lenLines = count($lines);
+        if ($lenLines>=2){
+            foreach ($lines as $line) {
+                $words = explode(" ", $line);
+
+                for ($i = count($words)-1; $i>=0; $i--){
+                    if($words[$i] != ""){
+                        $lastWord = $words[$i];
+                        break;
+                    }
+                }
+
+                for ($i = strlen($lastWord)-1; $i>=0; $i--){
+                    if( $this->is_valid($lastWord[$i]) ){
+                        if ($this->is_valid($lastWord[$i-1])){
+                            $finalSilaba[] = $lastWord[$i-1].$lastWord[$i];
+                            break;
+                        }
+                    }
+                }
+            }
+            $resp = $this->typeRima($finalSilaba);
+        }
+        else {
+            $resp = "Porfavor Ingrese un parrafo de dos o mas lineas";
+        }
+        return $resp;
+    }
+
+    private function rimaParrafoAll($text){
+
+        $resp = "";
+
+        $parrafos = explode("\r\n\r\n", $text);
+
+        $resp .= $this->rimaParrafo($parrafos[0]);
+        unset($parrafos[0]);
+        foreach($parrafos as $parrafo){
+            $resp .= "\r\n".$this->rimaParrafo($parrafo);
+        }
+        return $resp;
+    }
+
     public function resolverProblema_2($text){
     	if ($text != ''){
-    		return $text." 2";
+    		return $this->rimaParrafoAll($text);
     	}
     }
 }
