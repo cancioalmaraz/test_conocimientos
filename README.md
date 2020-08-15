@@ -4,9 +4,26 @@ Esto es un test para demostrar mis conocimientos en desarrollos web.
 
 Espero saber mas de ustedes, gracias :smile: :smile: :smile:
 
+* Archivos importantes
 * Instalacion
   * Mac y Linux
   * Windows
+  
+## Archivos importantes
+
+Los archivos importantes son:
+
+app/myClass/problemas.php   :arrow_right: En este archivo se encuentra la clase que contiene todos los metodos que resuelven los problemas propuestos.
+
+app/myClass/helpers.php     :arrow_right: Aqui se cargan metodos auxiliares.
+
+app/Http/Controllers/problemasController.php    :arrow_right: Aqui está el controlador de las paginas de problemas, solo implementa un metodo que se encarga de identificar que numero de problema hace la peticion.
+
+resources/views/    :arrow_right: Aqui se situan todas las plantillas blade para las vistas.
+
+public/     :arrow_right: Aqui estan los archivos .js y .css que usa el programa.
+
+El programa usa la libreria BOOTSTRAP 4, para que tenga un diseño responsivo y ademas para poder presentar mejor las vistas.
 
 ## Instalacion
 
@@ -26,44 +43,44 @@ En mac primeramente debemos instalar brew, que es un instalador de paquetes (val
 
 Ahora, desde una terminal ejecutamos;
 
-* (mac) brew install php
-* (linux) sudo apt-get install php
+    (mac) brew install php
+    (linux) sudo apt-get install php
 
 Despues instalamos composer, ejecutando en el terminal lo siguiente:
 
-* php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-* php -r "if (hash_file('sha384', 'composer-setup.php') === '572cb359b56ad9ae52f9c23d29d4b19a040af10d6635642e646a7caa7b96de717ce683bd797a92ce99e5929cc51e7d5f') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-* php composer-setup.php
-* php -r "unlink('composer-setup.php');"
+    php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+    php -r "if (hash_file('sha384', 'composer-setup.php') === '572cb359b56ad9ae52f9c23d29d4b19a040af10d6635642e646a7caa7b96de717ce683bd797a92ce99e5929cc51e7d5f') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+    php composer-setup.php
+    php -r "unlink('composer-setup.php');"
 
 O bien puedes ir a copiar el comando de arriba en https://getcomposer.org/download/
 
 Ahora ejecutamos el siguiente comando para ejecutar composer:
 
-* mv composer.phar /usr/local/bin/composer
+    mv composer.phar /usr/local/bin/composer
 
 Intalamos base de datos, el que laravel nos recomienda es la version 5.7 :tired_face: :tired_face: :tired_face: :
 
-* (mac) brew install mysql@5.7
-* (linux) sudo apt-get install mysql@5.7
+    (mac) brew install mysql@5.7
+    (linux) sudo apt-get install mysql@5.7
 
 Iniciamos la base de datos:
 
-* (mac) brew services start mysql@5.7
+    (mac) brew services start mysql@5.7
 
 Muy bien, hasta aqui ya tenemos lo necesario para correr nuestro programa, ahora clonamos nuestro repositorio:
 
-* git clone https://github.com/cancioalmaraz/test_conocimientos.git
+    git clone https://github.com/cancioalmaraz/test_conocimientos.git
 
 ![Captura de Pantalla 2020-08-14 a la(s) 20 12 19](https://user-images.githubusercontent.com/47458067/90303276-b3ac2080-de7a-11ea-81bf-9c73bcd7de24.png)
 
 Nos situamos en la carpeta donde esta nuestro proyecto:
 
-cd test_conocimientos
+    cd test_conocimientos
 
 Ahora ejecutamos nuestro servidor web local con:
 
-php artisan serve
+    php artisan serve
 
 ![Captura de Pantalla 2020-08-14 a la(s) 22 06 32](https://user-images.githubusercontent.com/47458067/90303298-d8a09380-de7a-11ea-9951-626cf8d75850.png)
 
@@ -92,7 +109,7 @@ Una vez instalado, abrir el programa y antes de iniciar los servicios, tenemos q
 
 Desde el terminal ejecutamos el siguiente comando:
 
-git clone https://github.com/cancioalmaraz/test_conocimientos.git
+    git clone https://github.com/cancioalmaraz/test_conocimientos.git
 
 ![git clone](https://user-images.githubusercontent.com/47458067/90302353-a3447780-de73-11ea-834f-7df0aa1cb6f8.PNG)
 
@@ -100,7 +117,7 @@ Ahora si estamos listos para iniciar los servicios, damos al boton Iniciar Todo.
 
 ![laragonIniciar](https://user-images.githubusercontent.com/47458067/90302383-d7b83380-de73-11ea-800b-b63fbfca62c8.PNG)
 
-OJO: Si el servidor Apache no inicia, generalmente se debe a que el puerto esta ocupado, es necesario cambiar a otro que este desocupado.
+*OJO*: Si el servidor Apache no inicia, generalmente se debe a que el puerto esta ocupado, es necesario cambiar a otro que este desocupado.
 
 ![laragonConf](https://user-images.githubusercontent.com/47458067/90302412-03d3b480-de74-11ea-9bd6-6879e1c823b8.PNG)
 
