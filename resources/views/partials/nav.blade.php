@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #732077;">
 	<a class="navbar-brand align-center">
 		<img src="../pc.png" width="45" height="45" class="d-inline-block align-center" alt="">
-		Test De Conocimientos
+		Test
 	</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
@@ -17,9 +17,9 @@
 		          Problemas
 		        </a>
 		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-		          <a class="dropdown-item" href="/problems/1">Problema 1</a>
+		          <a class="dropdown-item" href="{{ route('problems', 1) }}">Problema 1</a>
 		          <div class="dropdown-divider"></div>
-		          <a class="dropdown-item" href="/problems/2">Problema 2</a>
+		          <a class="dropdown-item" href="{{ route('problems', 2) }}">Problema 2</a>
 		        </div>
 		      </li>
 
