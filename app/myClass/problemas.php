@@ -153,4 +153,14 @@ class problemas
     		return $this->rimaParrafoAll($text);
     	}
     }
+
+    public function resolverProblemas($id, $text){
+        if ($id == 1){
+            $respuesta = $this->resolverProblema_1( $text );
+        }
+        else{
+            $respuesta = $this->resolverProblema_2( $text );
+        }
+        return $respuesta;
+    }
 }
